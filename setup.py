@@ -1,4 +1,4 @@
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 tribus_hash_module = Extension('tribus_hash',
                                sources = ['tribusmodule.c',
