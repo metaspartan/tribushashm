@@ -8,7 +8,7 @@
 #include "sph_keccak.h"
 #include "sph_echo.h"
 
-void tribus_hash(const char* input, char* output)
+void tribushashm(const char* input, char* output)
 {
  	sph_jh512_context ctx_jh;
  	sph_keccak512_context ctx_keccak;

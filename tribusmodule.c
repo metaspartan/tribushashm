@@ -17,9 +17,9 @@ static PyObject *tribus_getpowhash(PyObject *self, PyObject *args)
     output = PyMem_Malloc(32);
 
 #if PY_MAJOR_VERSION >= 3
-    tribus_hash((char *)PyBytes_AsString((PyObject*) input), output);
+    tribushashm((char *)PyBytes_AsString((PyObject*) input), output);
 #else
-    tribus_hash((char *)PyString_AsString((PyObject*) input), output);
+    tribushashm((char *)PyString_AsString((PyObject*) input), output);
 #endif
     Py_DECREF(input);
 #if PY_MAJOR_VERSION >= 3
@@ -39,19 +39,19 @@ static PyMethodDef TribusMethods[] = {
 #if PY_MAJOR_VERSION >= 3
 static struct PyModuleDef TribusModule = {
     PyModuleDef_HEAD_INIT,
-    "tribus_hash",
+    "tribushashm",
     "...",
     -1,
     TribusMethods
 };
 
-PyMODINIT_FUNC PyInit_tribus_hash(void) {
+PyMODINIT_FUNC PyInit_tribushashm(void) {
     return PyModule_Create(&TribusModule);
 }
 
 #else
 
-PyMODINIT_FUNC inittribus_hash(void) {
-    (void) Py_InitModule("tribus_hash", TribusMethods);
+PyMODINIT_FUNC inittribushashm(void) {
+    (void) Py_InitModule("tribushashm", TribusMethods);
 }
 #endif

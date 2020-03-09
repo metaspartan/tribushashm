@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-void tribus_hash(const char* input, char* output);
+void tribushashm(const char* input, char* output);
 
 #ifdef __cplusplus
 }
