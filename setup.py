@@ -10,6 +10,6 @@ tribushashm_module = Extension('tribushashm',
                                include_dirs=['.', './sph'])
 
 setup (name = 'tribushashm',
-       version = '1.0',
+       version = '1.0.5',
        description = 'Bindings for tribus proof of work used by Denarius',
        ext_modules = [tribushashm_module])
